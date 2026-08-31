@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Six Years of Us ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff8fb;color:#54283a;font-family:Montserrat,sans-serif;overflow-x:hidden}
+#gate{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 50% 35%,#fff,#ffeaf2 48%,#f7c8d9);transition:opacity .9s,visibility .9s}
+#gate.hidden{opacity:0;visibility:hidden;pointer-events:none}.gate-card{width:min(440px,90%);padding:52px 38px;text-align:center;background:rgba(255,255,255,.72);border:1px solid rgba(255,255,255,.9);border-radius:30px;box-shadow:0 25px 80px #b95d7d33;backdrop-filter:blur(16px)}
+.eyebrow{letter-spacing:5px;text-transform:uppercase;font-size:11px;color:#b14e72}.gate-card h1,.hero h1,.section-title{font-family:"Cormorant Garamond",serif}.gate-card h1{font-size:54px;line-height:.95;margin:16px 0 12px}.gate-card p{font-size:13px;color:#8c6070;line-height:1.8}.pass{display:flex;gap:8px;justify-content:center;margin:26px 0}.pass input{width:46px;height:58px;text-align:center;font-size:24px;border:1px solid #edbfd0;border-radius:12px;background:#fff;color:#54283a;outline:none}.pass input:focus{border-color:#b84f74;box-shadow:0 0 0 4px #b84f7414}.unlock{border:0;background:#54283a;color:#fff;padding:15px 28px;border-radius:30px;font-size:12px;letter-spacing:2px;text-transform:uppercase;cursor:pointer}.error{height:18px;color:#b84f74;font-size:11px;margin-top:14px}
+#site{opacity:0;transition:opacity 1.2s}.show{opacity:1!important}
+header{position:fixed;top:0;left:0;right:0;z-index:20;padding:20px 6%;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(#fff8fbee,transparent);font-size:12px}.brand{font-family:"Cormorant Garamond",serif;font-size:25px}.nav a{margin-left:24px;text-decoration:none;color:#754254}
+.hero{min-height:100vh;display:grid;place-items:center;text-align:center;padding:100px 20px;position:relative;background:linear-gradient(135deg,#fffafd,#ffe9f1)}.hero:before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;background:#f6b7cd55;filter:blur(70px);top:10%;left:50%;transform:translateX(-50%)}.hero>*{position:relative}.hero h1{font-size:clamp(70px,12vw,150px);line-height:.75;margin:22px 0;color:#54283a}.hero p{max-width:650px;margin:25px auto;color:#865568;line-height:2;font-size:15px}.date{font-size:12px;letter-spacing:4px;text-transform:uppercase;color:#b14e72}
+.section{padding:110px 8%;max-width:1250px;margin:auto}.center{text-align:center}.section-title{font-size:64px;line-height:1;margin:10px 0 25px}.letter{max-width:800px;margin:auto;font-family:"Cormorant Garamond",serif;font-size:25px;line-height:1.65;color:#633445}.letter:first-letter{font-size:70px;float:left;line-height:.8;padding-right:8px;color:#b14e72}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px}.photo{aspect-ratio:4/5;border-radius:22px;overflow:hidden;background:linear-gradient(145deg,#f7d1df,#fff);position:relative}.photo:nth-child(2),.photo:nth-child(5),.photo:nth-child(8){transform:translateY(28px)}.photo img{width:100%;height:100%;object-fit:cover;display:block}.placeholder{height:100%;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;color:#9b6276;font-family:"Cormorant Garamond",serif;font-size:25px}
+.timeline{border-left:1px solid #e5b8c8;max-width:760px;margin:55px auto 0;padding-left:35px}.milestone{margin:0 0 45px;position:relative}.milestone:before{content:"♡";position:absolute;left:-51px;top:-8px;color:#b84f74;font-size:22px;background:#fff8fb}.milestone h3{font-family:"Cormorant Garamond",serif;font-size:31px;margin:0 0 6px}.milestone p{line-height:1.8;color:#856070;font-size:14px}
+.final{min-height:80vh;display:grid;place-items:center;text-align:center;background:#54283a;color:white;padding:100px 20px;position:relative;overflow:hidden}.final:before{content:"♡ ♡ ♡";position:absolute;font-size:200px;letter-spacing:50px;color:#ffffff08;white-space:nowrap}.final h2{font-family:"Cormorant Garamond",serif;font-size:76px;line-height:.9;margin:0 0 25px}.final p{max-width:680px;line-height:2;font-size:14px;color:#f4dbe4;margin:auto}.signature{margin-top:35px;font-family:"Cormorant Garamond",serif;font-size:28px}
+footer{text-align:center;padding:25px;background:#3d202c;color:#dcb7c5;font-size:10px;letter-spacing:2px}
+.heart{position:fixed;pointer-events:none;z-index:5;animation:float 6s linear forwards;font-size:18px;color:#d96891}@keyframes float{from{transform:translateY(0) scale(.7);opacity:.9}to{transform:translateY(-110vh) rotate(20deg) scale(1.4);opacity:0}}
+@media(max-width:700px){.nav{display:none}.gallery{grid-template-columns:1fr 1fr}.section-title{font-size:48px}.letter{font-size:21px}.photo:nth-child(2),.photo:nth-child(5),.photo:nth-child(8){transform:none}}
+</style>
+</head>
+<body>
+<div id="gate">
+ <div class="gate-card">
+  <div class="eyebrow">A little secret</div>
+  <h1>For My Love ♡</h1>
+  <p>Six years of memories deserve a door that only we can open.<br>Enter our little secret to begin.</p>
+  <div class="pass">
+   <input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric">
+   <input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric">
+  </div>
+  <button class="unlock" onclick="unlock()">Open our story</button>
+  <div class="error" id="error"></div>
+ </div>
+</div>
+
+<div id="site">
+<header><div class="brand">Us, Always ♡</div><nav class="nav"><a href="#story">Our Story</a><a href="#memories">Memories</a><a href="#letter">A Letter</a></nav></header>
+
+<section class="hero">
+ <div>
+  <div class="date">Six years • One story • Endless tomorrows</div>
+  <h1>Six Years<br>of Us.</h1>
+  <p>Some stories are written in books. Ours was written in ordinary days, stolen glances, long conversations, laughter, difficult moments, forgiveness, growth, and a thousand tiny choices to keep choosing each other.</p>
+ </div>
+</section>
+
+<section class="section center" id="story">
+ <div class="eyebrow">The beginning</div><h2 class="section-title">It all started with you.</h2>
+ <p class="letter">Six years ago, we started writing our story. I didn't know then how many versions of ourselves we would meet along the way. I didn't know how many ordinary moments would become the memories I return to when I need to remember what home feels like. But somehow, through every season, you became more than someone I loved—you became part of the way I understand happiness, comfort, hope, and the future.</p>
+</section>
+
+<section class="section" id="memories">
+ <div class="center"><div class="eyebrow">Our little museum</div><h2 class="section-title">Ten moments I never want to forget.</h2><p style="text-align:center;color:#8b6170">Replace the ten image files below with your own photos, keeping the filenames.</p></div>
+ <div class="gallery">
+  <div class="photo"><img src="photo1.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="placeholder">Our beginning ♡</div></div>
+  <div class="photo"><img src="photo2.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="placeholder">That smile ♡</div></div>
+  <div class="photo"><img src="photo3.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="placeholder">A day worth remembering</div></div>
+  <div class="photo"><img src="photo4.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="placeholder">Just us ♡</div></div>
+  <div class="photo"><img src="photo5.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="placeholder">A favorite memory</div></div>
+  <div class="photo"><img src="photo6.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="placeholder">Laughing together</div></div>
+  <div class="photo"><img src="photo7.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="placeholder">One of a thousand moments</div></div>
+  <div class="photo"><img src="photo8.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="placeholder">My favorite person ♡</div></div>
+  <div class="photo"><img src="photo9.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="placeholder">Then & now</div></div>
+  <div class="photo"><img src="photo10.jpg" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="placeholder">To every tomorrow</div></div>
+ </div>
+</section>
+
+<section class="section" id="letter">
+ <div class="center"><div class="eyebrow">Six years later</div><h2 class="section-title">If I could tell you one thing…</h2></div>
+ <div class="timeline">
+  <div class="milestone"><h3>I would choose the beginning again.</h3><p>Not because everything was perfect, but because every imperfect moment led me here—to the person who has seen different versions of me and still stayed close enough to know my heart.</p></div>
+  <div class="milestone"><h3>I would choose the growing.</h3><p>We have changed. We have learned. We have had days that felt effortless and days that asked more from us. And somehow, growing beside you has made the journey more beautiful than I ever imagined.</p></div>
+  <div class="milestone"><h3>I would choose the little things.</h3><p>The conversations that lasted too long, the jokes that only make sense to us, the quiet moments, the looks across a room, the comfort of knowing you're there. Those are the pieces of our story I treasure most.</p></div>
+  <div class="milestone"><h3>And I would choose the future.</h3><p>No one can promise exactly what tomorrow will look like. But if I get a choice, I want more mornings with you, more adventures, more laughter, more photographs, more lessons, more ordinary Tuesdays—and more years of calling this love ours.</p></div>
+ </div>
+</section>
+
+<section class="final">
+ <div>
+  <div class="eyebrow" style="color:#efb5c9">Happy 6th Anniversary</div>
+  <h2>My love,<br>I'd choose you<br>again & again.</h2>
+  <p>Six years ago, we started writing our story. Today, it’s filled with love, growth, laughter, and memories I’ll cherish forever. No matter what the future holds, I’d choose you again and again. Happy 6th Anniversary, my love.<br><br>
+  Thank you for being there through the chapters I understood and the ones I didn't. Thank you for knowing the person behind my words, for making beautiful days brighter, and for making difficult days feel less lonely. I hope when we look back years from now, we won't only remember the big moments—we'll remember how often we found our way back to each other.<br><br>
+  If love is a collection of choices, then you are the choice I am most grateful to make. Yesterday, today, and in every tomorrow I am lucky enough to have, my heart knows the same answer: you.</p>
+  <div class="signature">Forever yours ♡</div>
+ </div>
+</section>
+<footer>MADE WITH LOVE • 6 YEARS • AND A MILLION LITTLE MEMORIES</footer>
+</div>
+
+<audio id="music" src="amaken.mp3" loop preload="auto"></audio>
+<script>
+const inputs=[...document.querySelectorAll('.pass input')];
+inputs.forEach((el,i)=>{el.addEventListener('input',()=>{el.value=el.value.replace(/\D/g,'').slice(-1);if(el.value&&inputs[i+1])inputs[i+1].focus()});el.addEventListener('keydown',e=>{if(e.key==='Backspace'&&!el.value&&inputs[i-1])inputs[i-1].focus()});});
+function unlock(){
+ const code=inputs.map(x=>x.value).join('');
+ if(code==='192020'){
+   document.getElementById('gate').classList.add('hidden');
+   document.getElementById('site').classList.add('show');
+   const m=document.getElementById('music');m.volume=.65;m.play().catch(()=>{});
+   setInterval(heart,650);
+   window.scrollTo(0,0);
+ }else{document.getElementById('error').textContent='That isn't our secret. Try again ♡';inputs.forEach(x=>x.value='');inputs[0].focus();}
+}
+function heart(){const h=document.createElement('div');h.className='heart';h.textContent=Math.random()>.2?'♡':'♥';h.style.left=Math.random()*100+'vw';h.style.bottom='-25px';h.style.fontSize=(12+Math.random()*22)+'px';h.style.animationDuration=(4+Math.random()*4)+'s';document.body.appendChild(h);setTimeout(()=>h.remove(),8000)}
+document.addEventListener('keydown',e=>{if(e.key==='Enter'&&!document.getElementById('gate').classList.contains('hidden'))unlock()});
+</script>
+</body>
+</html>
